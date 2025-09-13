@@ -15,6 +15,9 @@ const elevatorRoutes = require('./routes/elevator');
 const app = express();
 const PORT = process.env.PORT || 10000;
 
+// Asegurar que el servidor escuche en todas las interfaces
+const HOST = '0.0.0.0';
+
 // Middleware de seguridad
 app.use(helmet());
 
@@ -121,11 +124,11 @@ async function startServer() {
     await connectDB();
     
     // Iniciar servidor
-    app.listen(PORT, () => {
-      console.log(`🚀 Servidor ejecutándose en puerto ${PORT}`);
-      console.log(`📱 API disponible en: http://localhost:${PORT}`);
-      console.log(`🏥 Health check: http://localhost:${PORT}/health`);
-      console.log(`📚 Documentación: http://localhost:${PORT}/`);
+    app.listen(PORT, HOST, () => {
+      console.log('🚀 Servidor ejecutándose en puerto ' + PORT);
+      console.log('📱 API disponible en: http://' + HOST + ':' + PORT);
+      console.log('🏥 Health check: http://' + HOST + ':' + PORT + '/health');
+      console.log('📚 Documentación: http://' + HOST + ':' + PORT + '/');
     });
   } catch (error) {
     console.error('❌ Error iniciando servidor:', error);
