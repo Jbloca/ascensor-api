@@ -1,0 +1,29 @@
+# Render.com Configuration
+
+## Build Command
+```bash
+npm install
+```
+
+## Start Command
+```bash
+npm start
+```
+
+## Environment Variables
+- `NODE_ENV=production`
+- `JWT_SECRET=tu_jwt_secret_muy_seguro_aqui_cambiar_en_produccion_123456789`
+- `JWT_EXPIRES_IN=7d`
+- `DATABASE_URL` (Render configurará automáticamente)
+
+## Health Check
+- Path: `/health`
+- Expected Response: `{"status":"OK"}`
+
+## Auto-Deploy
+- Branch: `main`
+- Auto-Deploy: `true`
+
+## Instance Type
+- Type: `Free` (para empezar)
+- Upgrade a `Starter` si necesitas más recursos
