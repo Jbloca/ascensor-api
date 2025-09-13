@@ -2,6 +2,8 @@ const { Pool } = require('pg');
 
 // Configuración de la base de datos PostgreSQL en Render
 const dbConfig = {
+  // Usar DATABASE_URL de Render si está disponible, sino usar configuración manual
+  connectionString: process.env.DATABASE_URL || undefined,
   host: process.env.DATABASE_HOST || 'dpg-d32rcvvdiees7391vld0-a',
   port: process.env.DATABASE_PORT || 5432,
   database: process.env.DATABASE_NAME || 'app_ascensor',
