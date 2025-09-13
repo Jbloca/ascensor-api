@@ -10,7 +10,7 @@ JWT_SECRET=OY$QCST0xNm^X7!koN^rjVxaeO!71J
 JWT_EXPIRES_IN=7d
 
 # Base de datos PostgreSQL (Render configurará automáticamente)
-DATABASE_URL=postgresql://app_ascensor_user:VQQgvyuuFDGECleKIB4Xtdxf54MWxP7t@oregon-postgres.render.com:5432/app_ascensor
+DATABASE_URL=postgresql://app_ascensor_user:VQQgvyuuFDGECleKIB4Xtdxf54MWxP7t@dpg-d32rcvvdiees7391vld0-a.oregon-postgres.render.com:5432/app_ascensor
 
 # Configuración de CORS para Render
 CORS_ORIGIN=https://tu-app-render.onrender.com,http://localhost:19006,http://localhost:3000
