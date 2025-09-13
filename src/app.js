@@ -14,9 +14,13 @@ const elevatorRoutes = require('./routes/elevator');
 
 const app = express();
 const PORT = process.env.PORT || 10000;
-
-// Asegurar que el servidor escuche en todas las interfaces
 const HOST = '0.0.0.0';
+
+// Log de configuración inicial
+console.log('🔧 Configuración inicial:');
+console.log('   - PORT:', PORT);
+console.log('   - HOST:', HOST);
+console.log('   - NODE_ENV:', process.env.NODE_ENV);
 
 // Middleware de seguridad
 app.use(helmet());
@@ -122,6 +126,10 @@ async function startServer() {
   try {
     // Conectar a la base de datos
     await connectDB();
+    
+    // Log del puerto para debugging
+    console.log('🔍 Puerto configurado:', PORT);
+    console.log('🔍 Host configurado:', HOST);
     
     // Iniciar servidor
     app.listen(PORT, HOST, () => {
