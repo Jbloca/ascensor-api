@@ -13,7 +13,7 @@ const cardRoutes = require('./routes/cards');
 const elevatorRoutes = require('./routes/elevator');
 
 const app = express();
-const PORT = process.env.PORT || 3000;
+const PORT = process.env.PORT || 10000;
 
 // Middleware de seguridad
 app.use(helmet());
