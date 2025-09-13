@@ -4,7 +4,7 @@ const { Pool } = require('pg');
 const dbConfig = {
   // Usar DATABASE_URL de Render si está disponible, sino usar configuración manual
   connectionString: process.env.DATABASE_URL || undefined,
-  host: process.env.DATABASE_HOST || 'dpg-d32rcvvdiees7391vld0-a',
+  host: process.env.DATABASE_HOST || 'oregon-postgres.render.com',
   port: process.env.DATABASE_PORT || 5432,
   database: process.env.DATABASE_NAME || 'app_ascensor',
   user: process.env.DATABASE_USER || 'app_ascensor_user',
